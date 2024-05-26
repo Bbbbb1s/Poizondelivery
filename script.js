@@ -47,4 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     shoesButton.addEventListener('click', function () {
         selectButton(this);
     });
+input1.addEventListener('focus', function () {
+    document.querySelector('.calculator').scrollIntoView({ behavior: 'smooth' });
+});
 });
