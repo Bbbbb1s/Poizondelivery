@@ -8,11 +8,28 @@
 </head>
 <body>
     <div class="calculator">
-        <input type="text" class="calculator-screen" id="screen" placeholder="Введите стоимость в ¥" />
+        <!-- Логотип -->
+        <img src="logo.png" alt="Логотип" class="logo">
+        
+        <!-- Информация о курсе и стоимости одежды и обуви -->
+        <div class="info-section">
+            <p class="info-text">¥ Курс: 14 ₽</p>
+            <p class="info-text">🚙 Одежда: 1600 ₽</p>
+            <p class="info-text">🚙 Обувь: 1900 ₽</p>
+        </div>
+        
+        <!-- Кнопки для выбора расчета -->
+        <div class="calculation-type">    
+            
+            <button id="clothes" class="calculation-button">Одежда</button>
+            <button id="shoes" class="calculation-button">Обувь</button>
+        </div>
+        
+        <!-- Поле для ввода числа, кнопка для рассчета, результат -->
+        <input type="text" class="calculator-screen" id="input1" placeholder="Введите стоимость в ¥" />
         <button class="calculate-button" id="calculate">Рассчитать</button>
         <div class="result" id="result"></div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
