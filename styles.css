@@ -7,7 +7,7 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
     margin: 0;
-    font-family: 'Roboto', sans-serif; /* Применение шрифта ко всему телу страницы */
+    
 }
 
 .calculator {
@@ -33,7 +33,7 @@ body {
 .calculation-button {
     display: inline-block; /* Делаем кнопки инлайн-блочными элементами */
     margin: 5px; /* Убираем внешние отступы между кнопками */
-    width: 49%; /* Устанавливаем ширину кнопок на 45% от родительского контейнера */
+    width: 145px;
     height: 50px;
     font-size: 18px;
     border: none;
@@ -53,7 +53,7 @@ body {
 }
 
 .info-section {
-    font-family: Blippo, fantasy;
+    
     text-align: center;
     margin-top: -5px;
     margin-bottom: 10px; /* Увеличим отступ между информационными блоками */
