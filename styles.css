@@ -1,7 +1,6 @@
 /* styles.css */
 
 body {
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +8,6 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     font-family: 'Roboto', sans-serif; /* Применение шрифта ко всему телу страницы */
-    overflow: hidden; /* Предотвращаем скролл страницы */
 }
 
 .calculator {
@@ -23,20 +21,19 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 300px; /* Максимальная ширина калькулятора */
+    box-sizing: border-box; /* Включаем padding в общую ширину элемента */
 }
 
 .logo {
-    height: 100%;
     width: 100%;
-    position: center;
-    margin-top: -40px; /* Положение логотипа сверху */
-    margin-bottom: -60px; /* Добавим отступ снизу для разделения логотипа и информации */
+    margin-top: -20px; /* Положение логотипа сверху */
+    margin-bottom: -20px; /* Добавим отступ снизу для разделения логотипа и информации */
 }
 
 .calculation-button {
     display: inline-block; /* Делаем кнопки инлайн-блочными элементами */
     margin: 5px; /* Убираем внешние отступы между кнопками */
-    width: 145px; /* Устанавливаем ширину кнопок на 45% от родительского контейнера */
+    width: 49%; /* Устанавливаем ширину кнопок на 45% от родительского контейнера */
     height: 50px;
     font-size: 18px;
     border: none;
@@ -45,8 +42,8 @@ body {
     border: 2px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 10px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .calculation-button:active,
@@ -64,7 +61,8 @@ body {
 
 .calculation-type {
     display: flex; /* Добавляем flex-контейнер */
-    justify-content: space-around; /* Выравниваем кнопки по горизонтали с равным пространством между ними */
+    justify-content: space-between; /* Выравниваем кнопки по горизонтали с равным пространством между ними */
+    width: 100%;
 }
 
 .calculator-screen {
@@ -80,7 +78,7 @@ body {
 }
 
 .calculate-button {
-    width: 300px;
+    width: 100%;
     height: 50px;
     font-size: 18px;
     border: none;
@@ -100,3 +98,30 @@ body {
     text-align: center;
     margin-top: 10px;
 }
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 600px) {
+    .calculator {
+        max-width: 100%; /* Увеличиваем ширину калькулятора на мобильных устройствах */
+        padding: 10px;
+    }
+
+    .calculation-button {
+        width: 48%; /* Устанавливаем ширину кнопок на 48% от родительского контейнера для лучшего выравнивания */
+        font-size: 16px;
+    }
+
+    .calculate-button {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .calculator-screen {
+        font-size: 20px;
+    }
+
+    .result {
+        font-size: 20px;
+    }
+}
+
