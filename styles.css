@@ -55,7 +55,7 @@ body {
 }
 
 .info-section {
-    font-family: Blippo, fantasy;
+    
     text-align: center;
     margin-top: -5px;
     margin-bottom: 10px; /* Увеличим отступ между информационными блоками */
