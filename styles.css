@@ -1,5 +1,7 @@
 /* styles.css */
+
 body {
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,11 +11,58 @@ body {
 }
 
 .calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 20px;
+    padding: 15px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; /* Максимальная ширина калькулятора */
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+    position: center;
+    margin-top: -40px; /* Положение логотипа сверху */
+    margin-bottom: -60px; /* Добавим отступ снизу для разделения логотипа и информации */
+}
+
+.calculation-button {
+    display: inline-block; /* Делаем кнопки инлайн-блочными элементами */
+    margin: 5px; /* Убираем внешние отступы между кнопками */
+    width: 145px; /* Устанавливаем ширину кнопок на 45% от родительского контейнера */
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.calculation-button:active,
+.calculation-button.selected {
+    background-color: #2c2b2ba8;
+    border-color: rgb(0, 0, 0);
+}
+
+.info-section {
+    font-family: Blippo, fantasy;
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 10px; /* Увеличим отступ между информационными блоками */
+}
+
+.calculation-type {
+    display: flex; /* Добавляем flex-контейнер */
+    justify-content: space-around; /* Выравниваем кнопки по горизонтали с равным пространством между ними */
 }
 
 .calculator-screen {
@@ -25,10 +74,11 @@ body {
     font-size: 24px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Включаем padding в общую ширину элемента */
 }
 
 .calculate-button {
-    width: 100%;
+    width: 300px;
     height: 50px;
     font-size: 18px;
     border: none;
@@ -36,6 +86,7 @@ body {
     background-color: #e0e0e0;
     cursor: pointer;
     margin-bottom: 10px;
+    box-sizing: border-box; /* Включаем padding в общую ширину элемента */
 }
 
 .calculate-button:active {
@@ -47,4 +98,3 @@ body {
     text-align: center;
     margin-top: 10px;
 }
-
