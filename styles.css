@@ -98,3 +98,9 @@ body {
     text-align: center;
     margin-top: 10px;
 }
+@media (max-width: 600px) {
+    .calculator {
+        max-width: 100%; /* Увеличиваем ширину калькулятора на мобильных устройствах */
+        padding: 10px;
+    }
+}
