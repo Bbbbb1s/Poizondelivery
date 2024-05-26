@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
     const input1 = document.getElementById('input1');
     const calculateButton = document.getElementById('calculate');
@@ -48,9 +47,5 @@ document.addEventListener('DOMContentLoaded', function () {
     shoesButton.addEventListener('click', function () {
         selectButton(this);
     });
-
-    // Прокрутка при фокусе на инпуте
-    input1.addEventListener('focus', function () {
-        document.querySelector('.calculator').scrollIntoView({ behavior: 'smooth' });
-    });
 });
+
