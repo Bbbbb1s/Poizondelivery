@@ -1,22 +1,50 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
-    const screen = document.getElementById('screen');
+    const input1 = document.getElementById('input1');
     const calculateButton = document.getElementById('calculate');
     const result = document.getElementById('result');
+    const clothesButton = document.getElementById('clothes');
+    const shoesButton = document.getElementById('shoes');
     
     calculateButton.addEventListener('click', function () {
-        const inputValue = parseFloat(screen.value);
+        const inputValue = parseFloat(input1.value);
+        const selectedButton = document.querySelector('.calculation-button.selected');
         
-        if (isNaN(inputValue)) {
-            result.textContent = 'Ошибка: введите число';
+        if (!selectedButton) {
+            result.textContent = 'Выберите тип расчета';
             return;
         }
         
- 
-	const increasedValue = inputValue * 1.05;
-        // Умножение на 14 и добавление 1900
-        const calculation = (increasedValue * 14) + 1900;
-	const roundedCalculation = calculation.toFixed(2);
-        result.textContent = `Цена с доставкой🚚: ${roundedCalculation}`;
+        const selectedCalculation = selectedButton.id;
+        
+        if (isNaN(inputValue)) {
+            result.textContent = 'Введите число';
+            return;
+        }
+    
+        let calculation;
+        if (selectedCalculation === 'clothes') {
+            const increasedValue = inputValue * 1.05;
+            calculation = (increasedValue * 14) + 1600;
+        } else if (selectedCalculation === 'shoes') {
+            const increasedValue = inputValue * 1.05;
+            calculation = (increasedValue * 14) + 1900;
+        }
+        
+        const roundedCalculation = calculation.toFixed(2);
+        result.textContent = `Стоимость с доставкой🚚: ${roundedCalculation}₽`;
+    });
+    
+    function selectButton(button) {
+        clothesButton.classList.remove('selected');
+        shoesButton.classList.remove('selected');
+        button.classList.add('selected');
+    }
+    
+    clothesButton.addEventListener('click', function () {
+        selectButton(this);
+    });
+    
+    shoesButton.addEventListener('click', function () {
+        selectButton(this);
     });
 });
