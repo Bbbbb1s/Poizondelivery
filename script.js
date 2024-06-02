@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         
         const roundedCalculation = calculation.toFixed(2);
-        result.textContent = `Стоимость с доставкой🚚: ${roundedCalculation}₽`;
+        result.innerHTML = `Стоимость с доставкой до ПВЗ <img src="cdek.png" alt="Иконка" class="small-icon">: ${roundedCalculation}₽`;
     });
     
     function selectButton(button) {
