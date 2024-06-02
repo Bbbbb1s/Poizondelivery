@@ -102,3 +102,28 @@ body {
     text-align: center;
     margin-top: 10px;
 }
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.banner-link {
+    display: block;
+    width: 48%;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.small-icon {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    vertical-align: middle; 
+    margin-top: -7px;
+}
